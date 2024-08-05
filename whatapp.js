@@ -138,6 +138,11 @@ function chooseHourBasedOnDay(date, hours) {
 
     return hours[comparableHours.indexOf(chosenHour)] || "";  // Return an empty string if no hour is chosen
 }
+function log(message) {
+    const logStream = fs.createWriteStream('log.txt', { flags: 'a' });
+    logStream.write(`${new Date().toISOString()} - ${message}\n`);
+    logStream.end();
+}
 function startKeepAlive() {
     (function sendKeepAlive() {
         setTimeout(async () => {
