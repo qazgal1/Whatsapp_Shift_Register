@@ -78,7 +78,7 @@ client.on('message', msg => {
         console.log(messageToSend);
         setTimeout(() => {
             console.log('Delay completed after 3 seconds');
-        }, 1500); // Delay of 3000 milliseconds (1.5 seconds)
+        }, 1500); // Delay of 3000 milliseconds (1.5000000s seconds)
         client.sendMessage(msg.author, messageToSend);
     }else{console.log("this is empty no dates just link")}
     }
